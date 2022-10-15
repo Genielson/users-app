@@ -14,7 +14,53 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                            <table class="table table-striped mb-5">
+
+
+                                    <tr>
+                                        <td> Teste 1 </td>
+                                        <td class="col-md-1"> <a href="#" class="btn btn-success"> Editar </a></td>
+                                        <td class="col-md-1"> <form method="post" action="#" >
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger" type="submit">
+                                                    Deletar
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+
+                                <tr>
+                                    <td> Teste 1 </td>
+                                    <td class="col-md-1"> <a href="#" class="btn btn-success"> Editar </a></td>
+                                    <td class="col-md-1"> <form method="post" action="#" >
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-danger" type="submit">
+                                                Deletar
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td> Teste 1 </td>
+                                    <td class="col-md-1"> <a href="#" class="btn btn-success"> Editar </a></td>
+                                    <td class="col-md-1"> <form method="post" action="#" >
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-danger" type="submit">
+                                                Deletar
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+
+
+                            </table>
+
+
+
                 </div>
             </div>
         </div>
