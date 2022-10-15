@@ -20,4 +20,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/edit-user/',[]);
+Route::get('/edit-user/',[App\Http\Controllers\UserController::class, 'edit'])->name('edit-user');

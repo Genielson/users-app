@@ -32,7 +32,7 @@
 
                                 <tr>
                                     <td> Teste 1 </td>
-                                    <td class="col-md-1"> <a href="#" class="btn btn-success"> Editar </a></td>
+                                    <td class="col-md-1"> <a href="{{route('edit-user')}}" class="btn btn-success"> Editar </a></td>
                                     <td class="col-md-1"> <form method="post" action="#" >
                                             @csrf
                                             @method('DELETE')
