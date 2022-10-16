@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserRequest;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -34,9 +35,13 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request){
+    public function store(UserRequest $request){
        $user = new User();
-
+       $user->name = $request->input("name");
+       $user->email = $request->input('email');
+       $user->password = Hash::make($request->input('password'));
+       $user->save();
+       return redirect()->route('home')->with('message-success','Usuario cadastrado com sucesso!');
     }
 
     /**
