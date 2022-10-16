@@ -4,7 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <a class="btn btn-success mb-4" href="{{route('create-user')}}"> New User </a> <br>
             <div class="card">
+
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
