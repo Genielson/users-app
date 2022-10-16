@@ -17,8 +17,10 @@
                             <table class="table table-striped mb-5">
 
 
+                                @foreach($allUsers as $user)
                                     <tr>
-                                        <td> Teste 1 </td>
+                                        <td> {{$user['name']}} </td>
+                                        <td> {{$user['email']}} </td>
                                         <td class="col-md-1"> <a href="#" class="btn btn-success"> Editar </a></td>
                                         <td class="col-md-1"> <form method="post" action="#" >
                                                 @csrf
@@ -29,32 +31,7 @@
                                             </form>
                                         </td>
                                     </tr>
-
-                                <tr>
-                                    <td> Teste 1 </td>
-                                    <td class="col-md-1"> <a href="{{route('edit-user')}}" class="btn btn-success"> Editar </a></td>
-                                    <td class="col-md-1"> <form method="post" action="#" >
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-danger" type="submit">
-                                                Deletar
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td> Teste 1 </td>
-                                    <td class="col-md-1"> <a href="#" class="btn btn-success"> Editar </a></td>
-                                    <td class="col-md-1"> <form method="post" action="#" >
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-danger" type="submit">
-                                                Deletar
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
+                                @endforeach
 
 
                             </table>

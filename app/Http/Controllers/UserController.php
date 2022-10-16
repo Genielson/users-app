@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -17,9 +18,21 @@ class UserController extends Controller
 
     }
 
-    public function edit()
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+
+    public function edit($id)
     {
-       return view('edit-user');
+        $user = User::findOrFail($id);
+        return view('edit-user',compact('user'));
     }
+
+
+
+
 
 }
