@@ -27,12 +27,12 @@
                                     <tr>
                                         <td> {{$user['name']}} </td>
                                         <td> {{$user['email']}} </td>
-                                        <td class="col-md-1"> <a href="{{route('edit-user',['id'=>$user['id']])}}" class="btn btn-success"> Editar </a></td>
-                                        <td class="col-md-1"> <form method="post" action="#" >
+                                        <td class="col-md-1"> <a href="{{route('edit-user',['id'=>$user['id']])}}" class="btn btn-success"> Edit </a></td>
+                                        <td class="col-md-1"> <form method="post" action="{{route('delete-user',['id'=>$user['id']])}}" >
                                                 @csrf
                                                 @method('DELETE')
                                                 <button class="btn btn-danger" type="submit">
-                                                    Deletar
+                                                    Delete
                                                 </button>
                                             </form>
                                         </td>
