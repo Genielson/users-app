@@ -14,6 +14,12 @@
                         </div>
                     @endif
 
+                        @if(session('message-success'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('message-success') }}
+                            </div>
+                        @endif
+
                             <table class="table table-striped mb-5">
 
 
@@ -21,7 +27,7 @@
                                     <tr>
                                         <td> {{$user['name']}} </td>
                                         <td> {{$user['email']}} </td>
-                                        <td class="col-md-1"> <a href="#" class="btn btn-success"> Editar </a></td>
+                                        <td class="col-md-1"> <a href="{{route('edit-user',['id'=>$user['id']])}}" class="btn btn-success"> Editar </a></td>
                                         <td class="col-md-1"> <form method="post" action="#" >
                                                 @csrf
                                                 @method('DELETE')

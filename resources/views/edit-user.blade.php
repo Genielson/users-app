@@ -8,7 +8,7 @@
                     <div class="card-header">Edit User </div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="{{ route('update-user',['id'=>$user['id']]) }}">
                             @csrf
 
                             <div class="row mb-3">
